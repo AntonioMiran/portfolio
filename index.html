@@ -1,56 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website HTML CSS Only | Codehal</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio António Miranda</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo">António.</a>
 
+    <!-- Botão hamburguer -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class='bx bx-menu'></i>
+    </div>
 
-    <header class="header">
-        <a href="#" class="logo">António.</a>
+    <nav class="navbar" id="navbar">
+      <a href="#" class="ativa">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Serviços</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contactos</a>
+    </nav>
+  </header>
 
+  <!-- Home -->
+  <section class="home">
+    <div class="home-conteudo">
+      <h1>Olá, Eu sou António Miranda</h1>
+      <h3>Desenvolvedor de Software</h3>
+      <p>
+        Apaixonado por tecnologia, construo sites modernos, responsivos e fáceis de usar.  
+        Gosto de transformar ideias em interfaces funcionais e atrativas.
+      </p>
+      <div class="btn-box">
+        <a href="#">Contrate-me</a>
+        <a href="#">Vamos Falar</a>
+      </div>
+    </div>
 
-        <nav class="navbar">
-            <a href="#" class="ativa">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contactos</a>
-        </nav>
+    <div class="home-sci">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+    </div>
 
-        </header>
+    <span class="home-imgHover"></span>
+  </section>
 
-        <section class="home">
-            <div  class="home-conteudo">
-                <h1>Olá, Eu sou António Miranda</h1>
-                <h3>Desenvolver de software</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias officia accusantium, cupiditate quaerat fugiat adipisci explicabo dolore, temporibus labore sequi nam quia quam eaque molestias veniam quod voluptas odit. Corrupti!</p>
-                <div class="btn-box">
-                    <a href="#">Contrate-me</a>
-                    <a href="#">Vamos Falar</a>
-                </div>
-            </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Criado por &copy; António Miranda</p>
+  </footer>
 
-            <div class="home-sci">
-                <a href=""><i class='bx bxl-facebook'></i></a>
-                <a href=""><i class='bx bxl-twitter' ></i></a>
-                <a href=""><i class='bx bxl-linkedin' ></i></a>
-            </div>
-
-            <span class="home-imgHover"></span>
-        </section>
-
-
-
-    
-
+  <script src="script.js"></script>
 </body>
 
 </html>

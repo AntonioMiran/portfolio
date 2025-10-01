@@ -40,7 +40,9 @@ body {
     right: 0;
     width: 100% ;
     height: 100%;
-    background: red;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
 }
 
 
@@ -75,22 +77,62 @@ body {
 }
 
 .home-conteudo h1 {
+    position: relative;
     font-size: 56px;
     font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-conteudo::before {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% ;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 2s ease forwards;
+    animation-delay: 2s;
 }
 
 .home-conteudo h3 {
+    position: relative;
     font-size: 32px ;
     font-weight: 700;
     color: #00abf0;
 }
+.home-conteudo h3::before {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% ;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
 
 .home-conteudo p {
+    position: relative;
     font-size: 16px;
     margin: 20px 0 40px;
 }
 
+.home-conteudo p::before {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% ;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
 .home-conteudo .btn-box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 345px;
@@ -98,12 +140,25 @@ body {
     
 }
 
+.home-conteudo .btn-box::before {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% ;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.7s;
+    z-index: 2;
+}
+
 .btn-box a {
     position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 50;
+    width: 150;
     height: 100%;
     background: #00abf0;
     border: 2px solid  #00abf0;
@@ -123,10 +178,10 @@ body {
 }
 
 .btn-box a:nth-child(2) {
-    color: #1585d4;
+    color:  #1b8ddf;
 }
 
-.btn-box a:nth-child(2) ::before  {
+.btn-box a:nth-child(2)::before  {
     background:  #00abf0 ;
 }
 
@@ -137,7 +192,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background: #197ec7;
+    background: #061a29;
     z-index: -1;
     transition: .5s;
 }
@@ -153,6 +208,19 @@ body {
     width: 170px;
     display: flex;
     justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% ;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.2s;
+    z-index: 2;
 }
 
 .home-sci a {
@@ -200,17 +268,121 @@ body {
     height: 100%;
     background: transparent;
     transition: 3s;
+    animation: 2;
 }
 
 .home-imgHover:hover {
     background: #081b29;
-    opacity: .8s;
+    opacity: .8;
+}
+
+.home-imgHover::after {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120% ;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.2s;
+    z-index: 100;
 }
 
 
-@keyframes showRigh  {
+.footer {
+    background-color: #081b29;
+    text-align: center;
+}
+
+
+@keyframes showRight  {
     100% {
         width: 0;
     }
 }
 
+
+
+/* ========= Responsividade ========= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 5% 40px;
+  }
+
+  .home-conteudo h1 {
+    font-size: 40px;
+  }
+
+  .home-conteudo h3 {
+    font-size: 24px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    height: auto;
+    align-items: center;
+  }
+
+  .btn-box a {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .home-sci {
+    position: static;
+    margin: 20px auto 0;
+  }
+}
+
+/* Telemóveis */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: #081b29;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    transition: left 0.3s ease;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
+
+  .navbar.active {
+    left: 0;
+  }
+
+  .home-conteudo h1 {
+    font-size: 28px;
+  }
+
+  .home-conteudo h3 {
+    font-size: 20px;
+  }
+
+  .home-conteudo p {
+    font-size: 14px;
+  }
+
+  .btn-box a {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
